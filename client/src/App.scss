@@ -1,0 +1,30 @@
+@import "~bootstrap/scss/bootstrap";
+
+.row {
+  height: 240px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.main {
+  margin-left: 0px;
+  background-color: #041425;
+}
+
+/*
+.notationDashboard {
+  background-color: #041120;
+  padding-top: 10px;
+}
+*/
+
+.bg-image {
+  background-image: url('/images/banner-background-04.png');
+  background-repeat: repeat-x;
+}
+
+.content {
+  color:antiquewhite;
+  background-color:blue;
+  min-height: 400px;;
+}

@@ -1,0 +1,46 @@
+@import "~bootstrap/scss/bootstrap";
+
+.navbar-brand {
+    margin-left: 4rem;
+    margin-top: 0.25em;
+    font-weight: 800;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border-radius: 6px;
+  }
+
+
+.nav-link {
+  color:darkslateblue !important;
+  background-color:darkgrey;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  font-weight: bolder;
+  border-radius: 4px;
+}
+
+.navitem-style {
+  color:darkslateblue !important;
+  background-color:darkgrey;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  font-weight: bolder;
+  border-radius: 4px;
+}
+
+.custom-dropdown {
+  margin-top: -20px;
+  }
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color:darkgray;
+  color:blue !important;
+  border-radius: 4px;
+}
+
+  

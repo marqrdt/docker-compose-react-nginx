@@ -1,0 +1,26 @@
+@import "~bootstrap/scss/bootstrap";
+
+.active {
+    text-decoration: none;
+}
+
+div {
+    margin-left: 12px;
+    margin-top: 8px;
+}
+
+.blog-header {
+    margin-bottom: 4px;
+    margin-left: 8px;
+}
+
+.blog-entry {
+    margin-top: 4px;
+}
+
+.heading {
+    background-color:darkgrey;
+    color:antiquewhite;
+    padding: 0.5em 1.0em 0.5em 1.0em;
+}
+

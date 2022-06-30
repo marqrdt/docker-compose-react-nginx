@@ -1,6 +1,17 @@
-FROM node:14.14.0-alpine
+#FROM node:16-alpine as builder
+FROM node:16
 WORKDIR /app
+RUN rm -rf /app/node_modules/*
+RUN mkdir -p /app/node_modules/.cache
 COPY ./package.json ./
-RUN npm i
+RUN npm config set unsafe-perm true
 COPY . .
+RUN chown -R node /app/
+RUN chmod 777 /app/node_modules
+RUN chmod 777 /app/node_modules/.cache
+RUN npm install
+#RUN yarn global add serve
+#RUN npm run build
+USER node
 CMD ["npm", "run", "start"]
+#CMD [ "serve", "-s", "build" ]
