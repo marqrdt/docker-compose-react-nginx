@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://music-encoding.org/schema/3.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://music-encoding.org/schema/3.0.0/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="3.0.0">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title>Section 2 :: 1</title>
+                <respStmt>
+                    <persName role="Composer">Paul Marquardt</persName>
+                </respStmt>
+            </titleStmt>
+            <pubStmt>
+                <date>2016-09-27 13:32:47</date>
+            </pubStmt>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Transcoded from Humdrum with Verovio version 0.9.13-dev-2db4a57</p>
+                <p>Encoded by: Craig Stuart Sapp</p>
+            </projectDesc>
+        </encodingDesc>
+        <revisionDesc>
+            <change n="1">
+                <respStmt>
+                    <persName>Laurent Pugin</persName>
+              </respStmt>
+                <changeDesc>
+                    <p>Truncating the file and adding choice markup</p>
+                </changeDesc>
+                <date>2016-09-27</date>
+            </change>
+        </revisionDesc>
+    </meiHead>
+    <music>
+        <body>
+            <mdiv>
+                <score>
+                    <scoreDef xml:id="scoredef-000000083381832" midi.bpm="138">
+                        <staffGrp xml:id="m-000000047097018" symbol="brace" barthru="true">
+                            <staffDef xml:id="staffdef-000000020483995" clef.shape="G" clef.line="2" key.sig="" meter.count="" meter.unit="" n="1" lines="5" />
+                            <staffDef xml:id="staffdef-000000020182723" clef.shape="F" clef.line="4" key.sig="" meter.count="" meter.unit="" n="2" lines="5" />
+                        </staffGrp>
+                    </scoreDef>
+                    <section xml:id="section-000000205758969">
+                        <measure xml:id="measure-000000129995775" right="dbl">
+                            <staff xml:id="staff-000000051890327" n="1">
+                                <layer xml:id="layer-000000045369537" n="1">
+                                    <chord xml:id="chord-L379F2" dur="4" stem.dir="down">
+                                        <note xml:id="note-L379F2S1" oct.ges="4" oct="4" pname="b" accid.ges="n" />
+                                        <note xml:id="note-L379F2S2" oct.ges="4" oct="5" pname="a" accid.ges="n" />
+                                    </chord>
+                                </layer>
+                            </staff>
+                            <staff xml:id="staff-000000049075641" n="2">
+                                <layer xml:id="layer-000000196724784" n="1">
+                                    <chord xml:id="chord-L379F3" dur="4" stem.dir="up">
+                                        <note xml:id="note-L381F1" oct="2" pname="e" accid.ges="f" stem.dir="up" />
+                                        <note xml:id="note-L383F2" oct="3" pname="d" accid.ges="n" stem.dir="up" />
+                                    </chord>
+                                </layer>
+                            </staff>
+                        </measure>
+                    </section>
+                </score>
+            </mdiv>
+        </body>
+    </music>
+</mei>

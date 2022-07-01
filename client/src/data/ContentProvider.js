@@ -187,7 +187,14 @@ class ContentProvider {
         },
         "8079-18400": {
             path: "/images/artwork/8079-18400.png"
-        }
+        },
+        "9210-13649": {
+            path: "/images/artwork/9210-13649.png"
+        },
+        "9670-10800": {
+            path: "/images/artwork/9670-10800.png"
+        },
+
     }
 
     codez = [
