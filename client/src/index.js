@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Container className="fluid bg-dark">
+    <Container className="fluid">
       <App />
       </Container>
   </React.StrictMode>,

@@ -1,32 +1,21 @@
 @import "~bootstrap/scss/bootstrap";
 
 .row {
-  height: 240px;
+  min-height: 200px;
   padding-top: 0px;
-  padding-bottom: 0px;
+  padding-bottom: 20px;
   margin-left: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 
-.main {
-  margin-left: 0px;
-  background-color: #041425;
-}
-
-/*
-.notationDashboard {
-  background-color: #041120;
-  padding-top: 10px;
-}
-*/
 
 .bg-image {
-  background-image: url('/images/banner-background-04.png');
+  background-image: url('/images/banner-background-03.png');
   background-repeat: repeat-x;
 }
 
-.content {
-  color:antiquewhite;
-  background-color:blue;
-  min-height: 400px;;
+.footer {
+  margin-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }

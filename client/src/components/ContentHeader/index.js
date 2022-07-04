@@ -18,7 +18,7 @@ class ContentHeader extends React.Component {
     render() {
         return (
             <Row>
-                <Col className="content-header rounded m-4 border border-dark">{this.props.text}</Col>
+                <Col className="bg-light rounded m-4 border border-dark">{this.props.text}</Col>
             </Row>
         )
     }

@@ -9,12 +9,12 @@ import './App.css';
 
 function App() {
     return (
-        <Container className="fluid bg-dark main">
-            <Container size="lg" fluid className="bg-dark bg-image main">
+        <Container className="fluid main">
+            <Container size="lg" fluid className="bg-image main">
                 <MainNavigation/>
             </Container>
-            <Container id="content" className='bg-dark content'/>
-            <MDBFooter>Paul Marquardt</MDBFooter>
+            <Container id="content" className='content'/>
+            <MDBFooter className="text-center text-dark bg-light footer">Paul Marquardt</MDBFooter>
         </Container>
     );
 }

@@ -8,7 +8,7 @@
   //font-weight: bolder;
   border-radius: 4px;
   height: 32px;
-
+  color: darkviolet;
 }
 
 a {
@@ -30,8 +30,8 @@ a:focus {
 }
 
 a:hover {
-  color: #112233;
-  background-color: darkgray;
+  color:darkslateblue;
+  background-color:antiquewhite;
   border-radius: 2px;
 }
 
@@ -43,9 +43,3 @@ a:active {
   color:darkslateblue !important;
   text-decoration: none;
 }
-
-a:hover {
-  color:antiquewhite;
-}
-
-  

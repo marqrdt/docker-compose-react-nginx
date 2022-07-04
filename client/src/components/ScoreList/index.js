@@ -44,7 +44,7 @@ class ScoreList extends React.Component {
             <Container>
                 {scores.map(score => {
                     index +=1;
-                    return <ScoreItem key={index} score={score}/>;
+                    return <ScoreItem className="score-item" key={index} score={score}/>;
                 })}
             </Container>
         )
