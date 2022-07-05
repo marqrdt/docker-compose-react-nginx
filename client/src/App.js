@@ -14,7 +14,7 @@ function App() {
                 <MainNavigation/>
             </Container>
             <Container id="content" className='content'/>
-            <MDBFooter className="text-center text-dark bg-light footer">Paul Marquardt</MDBFooter>
+            <MDBFooter className="text-center text-dark bg-light footer"><strong>Paul Marquardt</strong> &#169;2022</MDBFooter>
         </Container>
     );
 }
