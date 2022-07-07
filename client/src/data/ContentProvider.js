@@ -19,13 +19,11 @@ class ContentProvider {
     content = {
         "home": "",
 
-        "about": `I was born in Baltimore and was raised in a diverse musical family. As a high school student, I studied composition with (the awesome)
-        Theldon Myers at Towson State Univeristy and proceeded to study at the Eastman School of Music with Joseph Schwantner, 
-        Samuel Adler and Robert Morris. My work with Robert Morris inspired my musical and spiritual path. My music has received awards from ASCAP (1991) and BMI (1988).
-        I later worked with Herbert Brun, Morgan Powell, and Salvatore Martirano at the University of Illinois at Champaign-Urbana and
-        studied piano with William Heiles. Along with pianist/composer Drew Krause, I performed as the piano duo THUMP,
-        premiering several works written for us as well as standard works from the two-piano and four-hand repertoire.
-        My life experiences and diverse band of teachers led me to forge a unique path in music, exploring modalities of mathematics, 
+        "about": `I was born in Baltimore and was raised in a diverse musical family. My mentors include Theldon Myers, Samuel Adler,
+        Joseph Schwantner, Robert Morris, Salvatore Martirano and Morgan Powell. I also studied piano with Elier Suarez, James Avery, and William Heiles.
+        My music has received awards from ASCAP (1991) and BMI (1988) and has been performed in the U.S., Asia and in Europe.
+        Along with pianist/composer Drew Krause, I performed as the piano duo THUMP, premiering several works written for us as well as standard works 
+        from the two-piano and four-hand repertoire. My diverse life experience led me to forge a unique path as a composer, exploring modalities of mathematics, 
         Western Music, jazz, and Eastern spiritualities. Through my work as a software developer, I've incorporated algorithmic elements into
         my music as well as designed and written software libraries for exploring algorithmic composition and Musical Set Theory.`,
 
@@ -207,7 +205,12 @@ class ContentProvider {
             title: "BBC Download",
             url: "https://bitbucket.org/paul_marquardt/bbc-download/src/master/",
             description: "A python application for downloading sound files from the (gargantuan) BBC online audio library"
-        }
+        },        
+        {
+            title: "Ultimatum",
+            url: "https://bitbucket.org/paul_marquardt/ultimatum/src/master/",
+            description: "An interactive improvisation game for two performers and computer"
+        }        
     ]
 
     constructor(props) {
