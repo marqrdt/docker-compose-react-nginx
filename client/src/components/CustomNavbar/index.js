@@ -35,6 +35,7 @@ const CustomNavbar = (props) => {
                         <NavDropdown.Divider/>
                         <NavDropdown.Item as={Link} to="/music_scores">Scores</NavDropdown.Item>
                         <NavDropdown.Item as={Link} to="/music_recordings">Recordings</NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to="/random_melody">Random Melody</NavDropdown.Item>
                     </NavDropdown>
                     <NavDropdown className="navitem-style text-center" title="graphics" id="basic-nav-dropdown">
                         <NavDropdown.Item as={Link} to="/artwork">artwork</NavDropdown.Item>

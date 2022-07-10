@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import '../data/ContentProvider';
+import BlogEntries from "../components/BlogEntries";
 import ContentProvider from "../data/ContentProvider";
 import ContentHeader from "../components/ContentHeader";
 import ReactDOM from "react-dom";
@@ -12,30 +13,22 @@ class Blog extends React.Component{
     //let this_props = {name: "Stuff"}
 
     componentDidMount(props) {
-        const contentProvider = new ContentProvider();
-        let children = []
-        children.push(<Col>{contentProvider.getContent({name: 'blog'})}</Col>)
-        children.push(<Col>blog content 1</Col>)
-        children.push(<Col>blog content 2</Col>)
-        children.push(<Col>blog content 3</Col>)
-    
-        let newElement = React.createElement('div', {name: "Blog stuff"},
-            <Row className='mr-auto'>{children}</Row>
-        )
+        let newElement = React.createElement(BlogEntries)
         ReactDOM.render(
-            newElement,
+                newElement,
                 document.getElementById('content')
         )
     }
 
     render(props) {
         const contentProvider = new ContentProvider();
-        return (
-        <Container id="heading">
-            <ContentHeader text={contentProvider.getHeading({name: "blog"})} className="content-header"/>
-        </Container>
+        return(
+            <Container id="heading">
+                <ContentHeader text={contentProvider.getHeading({name: "blogz"})} className="content-header"/>
+            </Container>
         )
     }
+
 }
 
 export default Blog;

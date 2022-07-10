@@ -10,22 +10,21 @@ class ContentProvider {
         "fractals": `Here are fractal images I've created. I hope you enjoy them.`,
         "music": `Some words about my musical compositions.`,
         "music_scores": "Some printable/performable scores of my music compositions.",
+        "random_melody": "Here is a random melody",
         "music_recordings": "Some recordings of my music compositions.",
         "codez": "Feel free to use/steal (with proper attribution) some of my codez.",
-        "blog": "Read my Blog for some really amazing things that come out of my BIG FUCKING BRAIN.",
+        "blogz": "Read my Blog for some really amazing things that come out of my BIG FUCKING BRAIN.",
         "signin": "Sign into this site for mo better stuff."
     }
 
     content = {
         "home": "",
 
-        "about": `I was born in Baltimore and was raised in a diverse musical family. As a high school student, I studied composition with (the awesome)
-        Theldon Myers at Towson State Univeristy and proceeded to study at the Eastman School of Music with Joseph Schwantner, 
-        Samuel Adler and Robert Morris. My work with Robert Morris inspired my musical and spiritual path. My music has received awards from ASCAP (1991) and BMI (1988).
-        I later worked with Herbert Brun, Morgan Powell, and Salvatore Martirano at the University of Illinois at Champaign-Urbana and
-        studied piano with William Heiles. Along with pianist/composer Drew Krause, I performed as the piano duo THUMP,
-        premiering several works written for us as well as standard works from the two-piano and four-hand repertoire.
-        My life experiences and diverse band of teachers led me to forge a unique path in music, exploring modalities of mathematics, 
+        "about": `I was born in Baltimore and was raised in a diverse musical family. My mentors include Theldon Myers, Samuel Adler,
+        Joseph Schwantner, Robert Morris, Salvatore Martirano and Morgan Powell. I also studied piano with Elier Suarez, James Avery, and William Heiles.
+        My music has received awards from ASCAP (1991) and BMI (1988) and has been performed in the U.S., Asia and in Europe.
+        Along with pianist/composer Drew Krause, I performed as the piano duo THUMP, premiering several works written for us as well as standard works 
+        from the two-piano and four-hand repertoire. My diverse life experience led me to forge a unique path as a composer, exploring modalities of mathematics, 
         Western Music, jazz, and Eastern spiritualities. Through my work as a software developer, I've incorporated algorithmic elements into
         my music as well as designed and written software libraries for exploring algorithmic composition and Musical Set Theory.`,
 
@@ -52,13 +51,13 @@ class ContentProvider {
 
     blogz = [
         {
-            "title": "My first blog!",
-            "date": new Date(2022, 6, 12, 21, 42),
+            "title": "An interesting function",
+            "date": new Date(2022, 6, 12, 21, 42).toString(),
             "content": "First rambling blog content"
         },
         {
             "title": "My second blog!",
-            "date": new Date(2022, 6, 12, 21, 44),
+            "date": new Date(2022, 6, 12, 21, 44).toString(),
             "content": "Second rambling blog content"
         }
     ]
@@ -68,7 +67,7 @@ class ContentProvider {
             title: "HEADSPIN",
             year: "1987",
             duration: "5'",
-            url: "/scores/HEADSPIN_for_8_saxophones_and two_amplified_pianos.pdf",
+            url: "/scores/HEADSPIN_for_8_saxophones_and_two_amplified_pianos.pdf",
             description: "for eight saxophones and two amplified pianos"
         },
         {
@@ -207,7 +206,12 @@ class ContentProvider {
             title: "BBC Download",
             url: "https://bitbucket.org/paul_marquardt/bbc-download/src/master/",
             description: "A python application for downloading sound files from the (gargantuan) BBC online audio library"
-        }
+        },        
+        {
+            title: "Ultimatum",
+            url: "https://bitbucket.org/paul_marquardt/ultimatum/src/master/",
+            description: "An interactive improvisation game for two performers and computer"
+        }        
     ]
 
     constructor(props) {
@@ -218,6 +222,12 @@ class ContentProvider {
     getScoreList = (props) => {
         //if ( props.name in this.data ) {
             return this.scorez;
+        //}
+    }
+
+    getBlogList = (props) => {
+        //if ( props.name in this.data ) {
+            return this.blogz;
         //}
     }
 

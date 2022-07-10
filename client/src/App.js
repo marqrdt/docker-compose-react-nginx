@@ -8,13 +8,15 @@ import MainNavigation from './components/MainNavigation';
 import './App.css';
 
 function getRandomBGImage() {
-    return Math.floor( (Math.random() * 2) + 3)
+    return "bg-image-" + Math.floor( Math.random() * 6 + 2 ).toString().padStart(2, "0");
 }
 
 function App() {
+    const [appState, setAppState] = useState([]);
+    let classes = getRandomBGImage() + ' main w-100';
     return (
-        <Container className="fluid main">
-            <Container size="lg" fluid className="bg-image-{ getRandomBGImage() } main">
+        <Container>
+            <Container fluid className={ classes }>
                 <MainNavigation/>
             </Container>
             <Container id="content" className='content'/>

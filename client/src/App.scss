@@ -1,7 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 
 .row {
-  min-height: 200px;
+  min-height: 160px;
   padding-top: 0px;
   padding-bottom: 20px;
   margin-left: 0px;
@@ -11,6 +11,11 @@
 
 .bg-image {
   background-image: url('/images/banner-background-03.png');
+  background-repeat: repeat-x;
+}
+
+.bg-image-02 {
+  background-image: url('/images/banner-background-02.png');
   background-repeat: repeat-x;
 }
 
@@ -24,6 +29,20 @@
   background-repeat: repeat-x;
 }
 
+.bg-image-05 {
+  background-image: url('/images/banner-background-05.png');
+  background-repeat: repeat-x;
+}
+
+.bg-image-06 {
+  background-image: url('/images/banner-background-06.png');
+  background-repeat: repeat-x;
+}
+
+.bg-image-07 {
+  background-image: url('/images/banner-background-07.png');
+  background-repeat: repeat-x;
+}
 .footer {
   margin-top: 2em;
   padding-top: 1em;

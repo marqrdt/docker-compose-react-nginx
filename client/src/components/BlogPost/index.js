@@ -15,15 +15,12 @@ class BlogPost extends React.Component {
   }
 
   render(props) {
-      return (
-      <Container id="heading">
-          <div className="font-weight-bold">{props.heading}</div>
-          <Row>
-              <Col
-                  className="bg-light rounded mr-lg-auto border border-dark">{props.content}</Col>
-          </Row>
+    return(
+      <Container>
+        <Row className="blog-title">{this.props.entry.title}</Row>
+        <Row className="blog-content">{this.props.entry.content}</Row>
       </Container>
-      )
+    )
   }
 }
 
