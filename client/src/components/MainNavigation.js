@@ -9,6 +9,7 @@ import Fractals from "../pages/fractals";
 import Music from "../pages/music";
 import MusicScores from "../pages/musicscores";
 import MusicRecordings from "../pages/musicrecordings";
+import RandomMusic from "../pages/random_music";
 import Codez from "../pages/codez";
 import Blog from "../pages/blog";
 import Signin from "../pages/signin";
@@ -32,6 +33,7 @@ const MainNavigation = (props) => {
                     <Route path='/music' render={(props) => <Music name={"music"} title={'Music page'}/>}/>
                     <Route path='/music_scores' render={(props) => <MusicScores name={"music_scores"} title={'Music scores'}/>}/>
                     <Route path='/music_recordings' render={(props) => <MusicRecordings name={"music_recordings"} title={'Music recordings'}/>}/>
+                    <Route path='/random_melody' render={(props) => <RandomMusic name={"random_melody"} title={'random_melody'}/>}/>
                     <Route path='/codez' render={(props) => <Codez name={"codez"} title={'Codez page'}/>}/>
                     <Route path='/blog' render={(props) => <Blog name={"blog"} title={'Blog page'}/>}/>
                     <Route path='/signin' render={(props) => <Signin name={"signin"} title={'Sign In'}/>}/>

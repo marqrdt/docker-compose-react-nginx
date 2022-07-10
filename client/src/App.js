@@ -12,6 +12,7 @@ function getRandomBGImage() {
 }
 
 function App() {
+    const [appState, setAppState] = useState([]);
     let classes = getRandomBGImage() + ' main w-100';
     return (
         <Container>

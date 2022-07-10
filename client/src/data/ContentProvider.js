@@ -10,9 +10,10 @@ class ContentProvider {
         "fractals": `Here are fractal images I've created. I hope you enjoy them.`,
         "music": `Some words about my musical compositions.`,
         "music_scores": "Some printable/performable scores of my music compositions.",
+        "random_melody": "Here is a random melody",
         "music_recordings": "Some recordings of my music compositions.",
         "codez": "Feel free to use/steal (with proper attribution) some of my codez.",
-        "blog": "Read my Blog for some really amazing things that come out of my BIG FUCKING BRAIN.",
+        "blogz": "Read my Blog for some really amazing things that come out of my BIG FUCKING BRAIN.",
         "signin": "Sign into this site for mo better stuff."
     }
 
@@ -50,13 +51,13 @@ class ContentProvider {
 
     blogz = [
         {
-            "title": "My first blog!",
-            "date": new Date(2022, 6, 12, 21, 42),
+            "title": "An interesting function",
+            "date": new Date(2022, 6, 12, 21, 42).toString(),
             "content": "First rambling blog content"
         },
         {
             "title": "My second blog!",
-            "date": new Date(2022, 6, 12, 21, 44),
+            "date": new Date(2022, 6, 12, 21, 44).toString(),
             "content": "Second rambling blog content"
         }
     ]
@@ -66,7 +67,7 @@ class ContentProvider {
             title: "HEADSPIN",
             year: "1987",
             duration: "5'",
-            url: "/scores/HEADSPIN_for_8_saxophones_and two_amplified_pianos.pdf",
+            url: "/scores/HEADSPIN_for_8_saxophones_and_two_amplified_pianos.pdf",
             description: "for eight saxophones and two amplified pianos"
         },
         {
@@ -221,6 +222,12 @@ class ContentProvider {
     getScoreList = (props) => {
         //if ( props.name in this.data ) {
             return this.scorez;
+        //}
+    }
+
+    getBlogList = (props) => {
+        //if ( props.name in this.data ) {
+            return this.blogz;
         //}
     }
 
