@@ -7,10 +7,14 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import MainNavigation from './components/MainNavigation';
 import './App.css';
 
+function getRandomBGImage() {
+    return Math.floor( (Math.random() * 2) + 3)
+}
+
 function App() {
     return (
         <Container className="fluid main">
-            <Container size="lg" fluid className="bg-image main">
+            <Container size="lg" fluid className="bg-image-{ getRandomBGImage() } main">
                 <MainNavigation/>
             </Container>
             <Container id="content" className='content'/>
