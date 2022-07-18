@@ -1,9 +1,5 @@
 import React from "react";
-import MDBRow from "react-bootstrap/Row";
-import MDBCol from "react-bootstrap/Col";
 import Col from 'react-bootstrap/Col';
-import {Link} from 'react-router-dom';
-import Row from 'react-bootstrap/Row';
 import './index.scss';
 
 class ScoreItem extends React.Component {

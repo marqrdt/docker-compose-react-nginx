@@ -2,7 +2,7 @@ import React from "react";
 import Col from 'react-bootstrap/Col';
 import './index.scss';
 
-class RepoItem extends React.Component {
+class RandomMelody extends React.Component {
 
     constructor(props) {
         super(props)
@@ -15,9 +15,9 @@ class RepoItem extends React.Component {
     render() {
         console.log(this.props)
         return (
-            <Col className="repo-item"><a href={this.props.repo.url} target="_blank"><strong>{this.props.repo.title}</strong></a> :: {this.props.repo.description}</Col>
+            <Col>Check back later for a randomly-generated melody just for you!</Col>
         )
     }
 }
 
-export default RepoItem;
+export default RandomMelody;

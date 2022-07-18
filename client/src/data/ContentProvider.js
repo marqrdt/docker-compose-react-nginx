@@ -9,11 +9,11 @@ class ContentProvider {
         "artwork": `Some words about my artwork and creative process`,
         "fractals": `Here are fractal images I've created. I hope you enjoy them.`,
         "music": `Some words about my musical compositions.`,
-        "music_scores": "Some printable/performable scores of my music compositions.",
-        "random_melody": "Here is a random melody",
+        "music_scores": "A somewhat incomplete of music compositions along with some downloadable scores. Some exist only in digital form or as a computer-assisted perfermance.",
+        "random_melody": "Here is a random melody rendered right in your browser.",
         "music_recordings": "Some recordings of my music compositions.",
         "codez": "Feel free to use/steal (with proper attribution) some of my codez.",
-        "blogz": "Read my Blog for some really amazing things that come out of my BIG FUCKING BRAIN.",
+        "blogz": "Read my Blog for some really amazing things that come out of MA' BIG FUCKING BRAIN.",
         "signin": "Sign into this site for mo better stuff."
     }
 

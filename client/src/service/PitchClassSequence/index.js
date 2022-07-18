@@ -1,18 +1,18 @@
 import MusicFunctions from "../MusicFunctions";
 
-class PitchClassSequence extends Array {
+class PitchClassSequence  {
     modulus = 12;
     constructor(inPCArray) {
         this.pcArray = [];
         inPCArray.forEach( pc => {
             if( typeof pc == "number") {
-                this.push( pc % this.modulus);
+                this.pcArray.push( pc % this.modulus);
             }
             else if (typeof pc == "string" && pc.toLowerCase() == "a") {
-                this.push(10);
+                this.pcArray.push(10);
             }
             else if (typeof pc == "string" && pc.toLowerCase() == "b") {
-                this.push(11);
+                this.pcArray.push(11);
             }
             else {
                 return false;
@@ -20,8 +20,12 @@ class PitchClassSequence extends Array {
         });
     }
 
+    getMembers() {
+        return this.pcArray;
+    }
+
     T(transposition) {
-        return new PitchClassSequence( this.map(x => (x + transposition) % this.modulus) );
+        return new PitchClassSequence( this.pcArray.map(x => (x + transposition) % this.modulus) );
     }
 
     TnI(transposition) {
@@ -33,33 +37,33 @@ class PitchClassSequence extends Array {
     }
 
     I() {
-        return new PitchClassSequence( this.map(x => (12 - x % this.modulus) ) );
+        return new PitchClassSequence( this.pcArray.map(x => (12 - x % this.modulus) ) );
     }
 
     R(transposition) {
-        return new PitchClassSequence( this.reverse() );
+        return new PitchClassSequence( this.pcArray.reverse() );
     }
 
     M(mult) {
-        return new PitchClassSequence( this.map(x => (x * mult) % this.modulus));
+        return new PitchClassSequence( this.pcArray.map(x => (x * mult) % this.modulus));
     }
 
     addPC(pitch) {
         const numRe = RegExp('\d+');
         if( typeof pitch == "number") {
-            this.push( pitch % this.modulus);
+            this.pcArray.push( pitch % this.modulus);
             return this;
         }
         else if (typeof pitch == "string" && pitch.match(numRe)) {
-            this.push(Number.parseInt(pitch));
+            this.pcArray.push(Number.parseInt(pitch));
             return this;
         }
         else if (typeof pitch == "string" && pitch.toLowerCase() == "a") {
-            this.push(10);
+            this.pcArray.push(10);
             return this;
         }
         else if (typeof pitch == "string" && pitch.toLowerCase() == "b") {
-            this.push(11);
+            this.pcArray.push(11);
             return this;
         }
         else {
@@ -78,13 +82,14 @@ class PitchClassSequence extends Array {
         if ( start + length > this.length ) {
             return undefined;
         }
-        return new PitchClassSequence(this.slice(start, start+length));
+        return new PitchClassSequence(this.pcArray.slice(start, start+length));
     }
 
     equals(anotherPitchClassSequence) {
-        if ( this.length != anotherPitchClassSequence.length ) {
+        if ( this.pcArray.length != anotherPitchClassSequence.length ) {
             return false;
         }
+        return this.getMembers() == anotherPitchClassSequence.getMembers();
 
     }
 }

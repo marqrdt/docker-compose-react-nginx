@@ -1,8 +1,4 @@
 import React from "react";
-import MDBRow from "react-bootstrap/Row";
-import MDBCol from "react-bootstrap/Col";
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import './index.scss';
 import ScoreItem from "../ScoreItem";
 import ContentProvider from "../../data/ContentProvider";

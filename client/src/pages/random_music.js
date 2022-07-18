@@ -1,39 +1,84 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import { useState } from "react";
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import '../data/ContentProvider';
-import {FcAbout} from "react-icons/all";
 import ContentProvider from "../data/ContentProvider";
 import ContentHeader from "../components/ContentHeader";
-import Card from '../components/Card'
+import MelodyForm from '../components/MelodyForm';
+import axios from 'axios';
+import 'verovio-humdrum';
+import RandomMelody from '../components/RandomMelody';
+import { getMeiPitch, getMeiPitchClass } from '../service/MusicFunctions';
 import ReactDOM, { render } from "react-dom";
 import './index.scss';
 
-class RandomMusic extends React.Component {
-        
-    componentDidMount(state) {
-        const Vex = require('vexflow');
-        var vf = new Vex.Flow.Factory({renderer: {elementId: 'content'}});
-        const score = vf.EasyScore();
-        const system = vf.System();
-        system.addStave({
-            voices: [score.voice(score.notes('C#5/q, B4, A4, G#4'))]
-        }).addClef('treble').addTimeSignature('4/4');
-        ReactDOM.render(
-                vf.draw(),
-                document.getElementById('content')
-        )
+const RandomMusic = () => {
+
+    const [props, setProps] = useState([]);
+    
+    const renderNotation = (verovio, elementId, docTitle, type = "pitch-class") => {
+        ///////////////////////////
+        /* Create the vrvToolkit */
+        ///////////////////////////
+        const zoom = 50;
+        const pageHeight = 1900;
+        const pageWidth = 1050;
+        const toolkit = new verovio.toolkit();
+        const options = {
+            adjustPageHeight: 1,
+            pageHeight: 6000,
+            pageWidth: 2500,
+            scale: 40,
+            font: "Leipzig"
+        }
+        const static_humdrum = 
+            '**kern\t**kern\t**vpos\n' +
+            '!bass\t!treble\t!\n' +
+            '*clefF4\t*clefG2\t*\n' +
+            'FFn\tryy\t-5\n' +
+            '*-\t*-\t*-'
+        const svgContent = toolkit.renderData(static_humdrum, options);
+        //console.log(svgContent);
+        return svgContent;
     }
 
-    render(props) {
-    const contentProvider = new ContentProvider();
-    return(
-        <Container id="heading">
-            <ContentHeader text={contentProvider.getHeading({name: "random_melody"})} className="content-header"/>
-        </Container>
-        )
+    const getProvider = () => {
+        return new ContentProvider();
     }
+
+    const updateState = (props) => {
+        alert('Updating state in RandomMelody component\n' + 'Melody length: ' + props.melodyLength + '\n' +
+        "Melody type: " + props.melodyType);
+        this.state.melodyLength = props.melodyLength;
+        this.state.melodyType = props.melodyType;
+    }
+
+    const componentDidMount = (state) => {
+        const verovio = require('verovio-humdrum');
+        const elementId = 'content';
+        const docTitle = 'Random Melody';
+        const objectType = 'pitch-class';
+        const scoreSvg = this.renderNotation(verovio,elementId,docTitle, "pitch-class");
+        const svgBlob = new Blob([scoreSvg], { type: "image/svg+xml" });
+        const svgURL = URL.createObjectURL(svgBlob);
+        //let newElement = React.createElement(RandomMelody)
+
+        //document.getElementById('content')
+        //console.log(tk);
+        //let newElement = React.createElement(ScoreList)
+    }
+
+    return(
+        <div>
+            <Container id="heading">
+                <ContentHeader text={getProvider().getHeading({name: "random_melody"})} className="content-header"/>
+            </Container>
+            <Container id="content">
+                <MelodyForm />
+            </Container>
+        </div>
+    )
 }
 
 export default RandomMusic;

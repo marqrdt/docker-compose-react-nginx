@@ -24,14 +24,15 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "react-xml-parser": "^1.1.8",
     "sass": "^1.32.11",
     "serve": "^13.0.2",
     "styled-components": "^5.3.0",
-    "verovio": "^3.6.0",
+    "verovio": "^3.10.0",
+    "verovio-humdrum": "^3.10.0",
     "verovioscoreeditor": "^1.0.3",
     "vexflow": "^4.0.3",
     "web-vitals": "^1.0.1",
+    "xml2js": "^0.4.23",
     "yarn": "^1.22.19"
   },
   "scripts": {
@@ -57,5 +58,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-error-overlay": "^6.0.9"
   }
 }

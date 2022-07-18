@@ -5,7 +5,6 @@ import {
     Col
 } from 'react-bootstrap';
 import ContentProvider from "../../data/ContentProvider";
-import {Link} from 'react-router-dom';
 import BlogPost from '../BlogPost';
 
 class BlogEntries extends React.Component {
@@ -15,6 +14,15 @@ class BlogEntries extends React.Component {
   }
 
   render(props) {
+    const contentProvider = new ContentProvider();
+    let blogz = contentProvider.getBlogList();
+    let index = 0;
+    return(
+        <Container>Coming soon: <strong>More stuff out of MA' BIG FUCKING BRAIN.</strong></Container>
+    )
+  }
+
+  renderFinal(props) {
     const contentProvider = new ContentProvider();
     let blogz = contentProvider.getBlogList();
     let index = 0;

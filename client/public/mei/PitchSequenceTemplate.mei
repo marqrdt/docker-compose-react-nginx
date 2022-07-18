@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://music-encoding.org/schema/3.0.0/mei-all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://music-encoding.org/schema/3.0.0/mei-all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<mei xmlns="http://www.music-encoding.org/ns/mei" meiversion="3.0.0">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <respStmt>
+                    <persName role="Composer">Paul Marquardt</persName>
+                </respStmt>
+            </titleStmt>
+            <pubStmt>
+                <date>2016-09-27 13:32:47</date>
+            </pubStmt>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>Transcoded from SetTheoryWeb with Verovio version 0.9.13-dev-2db4a57</p>
+                <p>Encoded by: Set Theory Web Project</p>
+            </projectDesc>
+        </encodingDesc>
+    </meiHead>
+    <music>
+        <body>
+            <mdiv>
+                <score>
+                    <scoreDef xml:id="scoredef-000000083381832" midi.bpm="90">
+                        <staffGrp xml:id="m-000000047097018" symbol="brace" barthru="true">
+                         </staffGrp>
+                    </scoreDef>
+                    <section xml:id="section-000000205758969">
+                        <measure xml:id="measure-000000146715210" n="1">
+                            <staff xml:id="staff-000000028610364" n="1">
+                                <layer xml:id="layer-000000171399170" n="1">
+                                </layer>
+                            </staff>
+                            <octave xml:id="octave-000000051716152" staff="1" startid="#note-L372F2S1" endid="#note-L386F2S4" dis="8" dis.place="above" />
+                        </measure>
+                     </section>
+                </score>
+            </mdiv>
+        </body>
+    </music>
+</mei>
