@@ -28,7 +28,6 @@
     "serve": "^13.0.2",
     "styled-components": "^5.3.0",
     "verovio": "^3.10.0",
-    "verovio-humdrum": "^3.10.0",
     "verovioscoreeditor": "^1.0.3",
     "vexflow": "^4.0.3",
     "web-vitals": "^1.0.1",
@@ -60,6 +59,7 @@
     ]
   },
   "devDependencies": {
-    "react-error-overlay": "^6.0.9"
+    "react-error-overlay": "^6.0.9",
+    "verovio-humdrum": "^3.10.0"
   }
 }

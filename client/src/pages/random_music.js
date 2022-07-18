@@ -15,7 +15,8 @@ import './index.scss';
 
 const RandomMusic = () => {
 
-    const [props, setProps] = useState([]);
+    const [melodyLength, setMelodyLength] = useState('');
+    const [melodyType, setMelodyType] = useState('');
     
     const renderNotation = (verovio, elementId, docTitle, type = "pitch-class") => {
         ///////////////////////////
@@ -47,12 +48,6 @@ const RandomMusic = () => {
         return new ContentProvider();
     }
 
-    const updateState = (props) => {
-        alert('Updating state in RandomMelody component\n' + 'Melody length: ' + props.melodyLength + '\n' +
-        "Melody type: " + props.melodyType);
-        this.state.melodyLength = props.melodyLength;
-        this.state.melodyType = props.melodyType;
-    }
 
     const componentDidMount = (state) => {
         const verovio = require('verovio-humdrum');
@@ -69,13 +64,23 @@ const RandomMusic = () => {
         //let newElement = React.createElement(ScoreList)
     }
 
+    const melodyLengthChangeHandler = (value) => {
+        console.log(value);
+        setMelodyLength(value);
+    }
+
+    const melodyTypeChangeHandler = (value) => {
+        console.log(value);
+        setMelodyType(value);
+    }
+
     return(
         <div>
             <Container id="heading">
                 <ContentHeader text={getProvider().getHeading({name: "random_melody"})} className="content-header"/>
             </Container>
             <Container id="content">
-                <MelodyForm />
+                <MelodyForm onMelodyLengthChangeHandler={melodyLengthChangeHandler} onMelodyTypeChangeHandler={melodyTypeChangeHandler}/>
             </Container>
         </div>
     )
