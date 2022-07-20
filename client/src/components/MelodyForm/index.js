@@ -1,35 +1,34 @@
 import React from "react";
 import './index.scss';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const MelodyForm = (props) => {
 
     const [melodyLength, setMelodyLength] = useState("");
     const [melodyType, setMelodyType] = useState("");
-
-    const submitHandler = (e) => {
-        e.preventDefault();
-        console.log(melodyLength);
-    };
+    
+    useEffect(() => {
+        setMelodyLength(props.defaultValues.length);
+    }, [props.defaultValues.length])
 
     const melodyLengthChangeHandler = (event) => {
-        this.props.setMelodyLength(event.target.value);
+        setMelodyLength(event.target.value);
     }
 
     const melodyTypeChangeHandler = (event) => {
-        this.props.setMelodyType(event.target.value);
+        setMelodyType(event.target.value);
     }
 
     return (
         <div>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={props.onSubmitHandler}>
             <label className="labelElement">
                 Melody Length:
-                <input name="melodyLength" type="number" min="1" max="24" step="1" className="formElement" onChange={props.setMelodyLength} />
+                <input name="melodyLength" defaultValue="1" type="number" min="1" max="24" step="1" className="formElement" onChange={props.onMelodyLengthChangeHandler} />
             </label>
-            <label for="melodyType" className="labelElement">
+            <label htmlFor="melodyType" className="labelElement">
                 Melody Type:
-                <select name="melodyType" id="melodyType" className="formElement" onChange={props.setMelodyType}>
+                <select name="melodyType" defaultValue="diatonic" id="melodyType" className="formElement" onChange={props.onMelodyTypeChangeHandler}>
                     <option value="diatonic">Diatonic</option>
                     <option value="chromatic">Chromatic</option>
                 </select>

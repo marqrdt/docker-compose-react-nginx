@@ -9,8 +9,8 @@ class ContentProvider {
         "artwork": `Some words about my artwork and creative process`,
         "fractals": `Here are fractal images I've created. I hope you enjoy them.`,
         "music": `Some words about my musical compositions.`,
-        "music_scores": "A somewhat incomplete of music compositions along with some downloadable scores. Some exist only in digital form or as a computer-assisted perfermance.",
-        "random_melody": "Here is a random melody rendered right in your browser.",
+        "music_scores": "A somewhat incomplete of music compositions along with some downloadable scores. Some exist only in digital form or as a computer-assisted perfermance and others are not being shared right now.",
+        "random_melody": "Here is a random melody rendered right in your browser. As my site evolves, you'll be able to select various profiles for melodic shape and stochastic variety to produce more interesting melodies.",
         "music_recordings": "Some recordings of my music compositions.",
         "codez": "Feel free to use/steal (with proper attribution) some of my codez.",
         "blogz": "Read my Blog for some really amazing things that come out of MA' BIG FUCKING BRAIN.",
@@ -25,7 +25,7 @@ class ContentProvider {
         My music has received awards from ASCAP (1991) and BMI (1988) and has been performed in the U.S., Asia and in Europe.
         Along with pianist/composer Drew Krause, I performed as the piano duo THUMP, premiering several works written for us as well as standard works 
         from the two-piano and four-hand repertoire. My diverse life experience led me to forge a unique path as a composer, exploring modalities of mathematics, 
-        Western Music, jazz, and Eastern spiritualities. Through my work as a software developer, I've incorporated algorithmic elements into
+        computer science, Western Music, jazz, and Eastern spiritualities. Through my work as a software developer, I've incorporated algorithmic elements into
         my music as well as designed and written software libraries for exploring algorithmic composition and Musical Set Theory.`,
 
         "music": `My output as a composer spans a wide range of stylistic, technical, and aesthetic approaches. Please feel free to download my music at the Scores link above.`,
@@ -33,12 +33,13 @@ class ContentProvider {
         "events": "Here you can find a list of upcoming events.",
 
         "artwork": `My artwork is created by a computer program I designed and wrote. It uses simple mathematical functions which
-        create chaotic and unpredictable patterns (sometimes called 'fractals'). These patterns are rendered on a canvas 
-        as individual dots. Over millions of iterations of the function, these dots form patterns which can range from 
-        simple curves to wildly chaotic shapes. Through my artwork, I attempt to cross back and forth between the realms of logic and fantasy.
-        The actual prints show an intense level of detail, revealing shapes and swirls not visible in the reduced images printed here.`,
+        create chaotic and unpredictable patterns. Sometimes called 'fractals', I prefer the term 'chaotic functions', which can produce 
+        visually recognizable patterns over time. These patterns are rendered on a canvas as individual dots. Over millions of iterations of the function,
+        these dots form patterns which can range from simple curves to wildly chaotic shapes. Through my artwork, I attempt to cross back and forth between 
+        the realms of logic and fantasy. The actual prints show an intense level of detail, revealing shapes and swirls not visible in the reduced images 
+        printed here. This site is still under construction and I have many more available.`,
 
-        "fractals": `These images are offered here for free download. Please contact me if you are interested in higher resolution images.`,
+        "fractals": `This site is still under construction, so check back soon for some of my fractal artwork.`,
 
         "music_scores": `Here are some scores of my musical compositions.`,
 

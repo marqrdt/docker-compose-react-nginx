@@ -16,6 +16,7 @@ class Artwork extends React.Component {
         const contentProvider = new ContentProvider();
         const artworkList = contentProvider.getArtworkList()
         let children = []
+        children.push(<Row>{contentProvider.getContent({name: "artwork"})}</Row>)
         Object.keys(artworkList).forEach( (k, i) => {
             let imgSource = '..' + artworkList[k].path
             children.push(<Card key={k}><img src={imgSource} alt={{k}} height={"960"}/></Card>)

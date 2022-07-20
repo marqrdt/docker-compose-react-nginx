@@ -47,9 +47,11 @@ const CustomNavbar = (props) => {
                     <Nav.Item className="navitem-style text-center">
                         <Nav.Link as={Link} to="/blog">blog</Nav.Link>
                     </Nav.Item>
+                    {/*
                     <Nav.Item className="navitem-style text-center">
                         <Nav.Link as={Link} to="/signin">signin</Nav.Link>
                     </Nav.Item>
+    */}
                 </Nav>
             </Navbar.Collapse>
             </Container>
