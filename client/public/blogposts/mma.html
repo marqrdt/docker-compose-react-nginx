@@ -1,0 +1,87 @@
+<h1>
+MMA :: The Modern Music Algorithm
+</h1>
+
+<div>
+MMA is a simple algorithm that can be used to create pitch structures that sound like Modern Music.
+This article describes the algorithm and hints at how it can be implemented in a number of modren programming languages.
+</div>
+
+<div>
+The basics of MMA
+MMA is a simple pitch-class selection process that imposes constraints on random selection of Pitch-classes to create an ordered 
+Pitch-class Sequence of nearly any length with a satisfying level of variety that will, over time, maintain aggregate completion and can create
+self-organizing Pitch-class structures. Simply put, it can create PC sequences that will, if skillfully expressed, "sound like Modern Music".
+
+Let's dive in...
+We will start with an empty sequence with no pitch-class content, expressed as an empty array [] which we will label mma_seq.
+
+The most basic logic flow can be expressed as follows.
+
+1. Choose a Pitch-class repetition factor pcrf as an integer from within the range of 5 through 10. We will use 6 in this example.
+2. Choose the length of your desired sequence
+3. Initialize mma_seq with a random Pitch-class from the range of possible Pitch-classes 0-11.
+</div>
+
+<div>
+Here is a very simple implementation of MMA written in Python, using a Pitch-class repetition factor of 6:
+
+<code>
+''' Define a very simple complement function to return  all PC not in a given PC-set elements'''
+def complement(elements):
+    return list(filter(lambda x: x not in elements, list(range(0,12))))
+
+''' Implement the basic MMA function in 10 lines of code '''
+def mma(seq_length, pcrf):
+    import collections
+    used_pcs = collections.deque([])
+    while len(mma_seq) < seq_length:
+        pc = rand.choice(complement(used_pcs))
+        mma_seq.append(pc)
+        if len(used_pcs) >= pcrf:
+            used_pcs.popleft()
+        used_pcs.append(pc)
+    return mma_seq
+</code>
+</div>
+
+<div>
+Example run with a desired sequence length of 24 and a Pitch-class repetition factor of 6, meaning that any 
+PC in the sequence will not be in the list of 6 previous PCs:
+
+<code>
+% mma(24, 6)
+% [0, 3, 11, 5, 1, 4, 10, 8, 3, 6, 7, 1, 11, 5, 4, 2, 9, 10, 1, 3, 11, 8, 0, 5]
+</code>
+
+<img alt="Image of notated sequence" />
+It is interesting to note that the first 17 elements of the list above complete a 12-note aggregate.
+</div>
+
+<div>
+Here's another run producing a 24 PC sequence which completes an aggregate within the first 13 PCs.
+Here, I've increased the Pitch-Class Repetition Factor to 9, meaning that any PC will not be repeated within 9
+PCs on either side.
+
+<code>
+    % mma(24,9)
+    % [6, 2, 3, 11, 1, 10, 4, 7, 5, 9, 8, 2, 0, 3, 6, 10, 4, 7, 5, 11, 1, 9, 8, 2]
+</code>
+As the PCRF variable increases, one will find an increasing number of repeated structures within the sequence. In the sequence above,
+the PC Sequence [10, 4, 7, 5, 9, 8, 2] occurs at indexes 5 and 15 (starting from 0). A PCRF value of 11 will just produce a repeating
+12-note row.
+</div>
+
+<h2>
+Further improvements
+</h2>
+<div>While the basic algorithm relies on a combination of randomness and memory, it does not explicity address the Pitch-Set content
+of the produced sequence. When I write music with a heavy concentration on aggregate completion ("aka Modern Music"), I have strong
+preferences over the PC-Set content of the pitch world of my music. I have preferences for some PC-Set Classes over others. In the 
+basic implementation of MMA illustrated above, there is no secondary PC selection process other than choosing a PC that has not appeared
+in the sequence within a fixed number of elements (the variable pcrf). One possibility, which I've explored in some of my compositions
+is to, at each PC selection step, choose a PC that, combined with the previous n PCs in the sequence, forms a certain PC-Set Class
+of size n+1 chosen among a list of ones that I prefer. This can provide a consistent pitch universe to the music while providing a
+satisfying variety to the music, along with providing steady stream of PCs for me to work into actual music. This can provide a partial
+solution to the "hard problem" of music composition, which is the "What comes next?" problem.
+</div>
