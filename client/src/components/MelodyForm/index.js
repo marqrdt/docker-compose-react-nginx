@@ -24,7 +24,7 @@ const MelodyForm = (props) => {
         <form onSubmit={props.onSubmitHandler}>
             <label className="labelElement">
                 Melody Length:
-                <input name="melodyLength" defaultValue="1" type="number" min="1" max="24" step="1" className="formElement" onChange={props.onMelodyLengthChangeHandler} />
+                <input name="melodyLength" defaultValue="1" type="number" min="1" max="36" step="1" className="formElement" onChange={props.onMelodyLengthChangeHandler} />
             </label>
             <label htmlFor="melodyType" className="labelElement">
                 Melody Type:

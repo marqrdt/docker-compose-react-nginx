@@ -23,13 +23,13 @@ const RandomMelody = (props) => {
         const verovio = require('verovio-humdrum');
         const toolkit = new verovio.toolkit();
         const zoom = 50;
-        const pageHeight = 1900;
-        const pageWidth = 1050;
+        const pageHeight = 500;
+        const pageWidth = 2000;
         const options = {
             adjustPageHeight: 1,
-            pageHeight: 1000,
-            pageWidth: 1600,
-            scale: 40,
+            pageHeight: pageHeight,
+            pageWidth: pageWidth,
+            scale: 50,
             font: "Leipzig"
         }
         const static_humdrum = 
@@ -43,7 +43,7 @@ const RandomMelody = (props) => {
             '!treble\t!\n' +
             '*clefG2\t*\n'
         const diatonicNotes = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'aa', 'bb', 'cc', 'dd', 'ee', 'ff', 'gg'];
-        const chromaticNotes = ['cn', 'c#n', 'dn', 'd#n', 'en', 'fn', 'f#n', 'gn', 'g#', 'an', 'a#', 'bn', 'ccn', 'cc#', 'ddn', 'dd#', 'een', 'ffn', 'ff#n', 'ggn', 'gg#n', 'aan', 'aa#n', 'bbn'];
+        const chromaticNotes = ['cnX', 'c#nX', 'dnX', 'd#nX', 'enX', 'fnX', 'f#nX', 'gnX', 'g#nX', 'anX', 'a#nX', 'bnX', 'ccnX', 'cc#X', 'ddnX', 'dd#X', 'eenX', 'ffnX', 'ff#nX', 'ggnX', 'gg#nX', 'aanX', 'aa#nX', 'bbnX'];
         let noteString = humdrumMelodyHeader;
         if ( melodyLength > 0 ) {
             for( let step = 0; step < melodyLength; step++ ){
