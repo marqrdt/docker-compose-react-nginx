@@ -4,7 +4,7 @@ class ContentProvider {
 
     heading = {
         "home": "newscores.com is the Web Portal of Paul Marquardt, a composer, artist, and software developer living in Central New Mexico.",
-        "about": `Paul Marquardt is a composer, artist and software develop living in Albuquerque, New Mexico.`,
+        "about": `Paul Marquardt is a composer, artist and software developer living in Albuquerque, New Mexico.`,
         "events": "Upcoming events and appearances.",
         "artwork": `Some words about my artwork and creative process`,
         "fractals": `Here are fractal images I've created. I hope you enjoy them.`,
