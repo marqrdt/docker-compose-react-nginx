@@ -52,14 +52,9 @@ class ContentProvider {
 
     blogz = [
         {
-            "title": "An interesting function",
+            "file": "/blogposts/2022-07-21-10-30.html",
             "date": new Date(2022, 6, 12, 21, 42).toString(),
-            "content": "First rambling blog content"
-        },
-        {
-            "title": "My second blog!",
-            "date": new Date(2022, 6, 12, 21, 44).toString(),
-            "content": "Second rambling blog content"
+            "title": "First rambling blog content"
         }
     ]
 

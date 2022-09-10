@@ -1,4 +1,4 @@
-import React, {useState, Fragment} from 'react';
+import React, {useState, useEffect, Fragment} from 'react';
 import {
     Container,
     Row,
@@ -7,20 +7,17 @@ import {
 
 import './index.scss';
 
-class BlogPost extends React.Component {
+const BlogPost = (props) => {
 
-  componentDidMount(props) {
+  useEffect((props) => {    
+  }, [])
 
-  }
-
-  render(props) {
-    return(
-      <Container>
-        <Row className="blog-title">{this.props.entry.title}</Row>
-        <Row className="blog-content">{this.props.entry.content}</Row>
-      </Container>
-    )
-  }
+  return(
+    <Container>
+      <Row className="blog-title">{props.title} : {props.date}</Row>
+      <Row className="blog-content">{props.content}</Row>
+    </Container>
+  )
 }
 
 export default BlogPost;
