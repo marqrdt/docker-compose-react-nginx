@@ -13,9 +13,9 @@ const BlogPost = (props) => {
   }, [])
 
   return(
-    <Container>
-      <Row className="blog-title">{props.title} : {props.date}</Row>
-      <Row className="blog-content">{props.content}</Row>
+    <Container className="blog-entry">
+      <Row className="blog-title">{props.title} :: {props.date}</Row>
+      <Row className="blog-content" dangerouslySetInnerHTML={{ __html: props.content}}/>
     </Container>
   )
 }

@@ -57,7 +57,7 @@ const RandomMelody = (props) => {
                 }
             }
         }
-        console.log(noteString);
+        //console.log(noteString);
         //const svgContent = toolkit.renderData(static_humdrum, options);
         const svgContent = toolkit.renderData(noteString, options);
         const elementId = 'renderMelody';
@@ -70,17 +70,17 @@ const RandomMelody = (props) => {
     
     const submitHandler = (e) => {
         e.preventDefault();
-        console.log("Generate Melody form submitted!");
+        //console.log("Generate Melody form submitted!");
         renderNotation();
     };
     
     const melodyLengthChangeHandler = (event) => {
-        console.log("Melody length: " + event.target.value);
+        //console.log("Melody length: " + event.target.value);
         setMelodyLength(event.target.value);
     }
 
     const melodyTypeChangeHandler = (event) => {
-        console.log("Melody type: " + event.target.value);
+        //console.log("Melody type: " + event.target.value);
         setMelodyType(event.target.value);
     }
     

@@ -38,23 +38,23 @@ class ContentProvider {
         these dots form patterns which can range from simple curves to wildly chaotic shapes. Through my artwork, I attempt to cross back and forth between 
         the realms of logic and fantasy. The actual prints show an intense level of detail, revealing shapes and swirls not visible in the reduced images 
         printed here. This site is still under construction and I have many more available.`,
-
         "fractals": `This site is still under construction, so check back soon for some of my fractal artwork.`,
-
         "music_scores": `Here are some scores of my musical compositions.`,
-
         "music_recordings": `This section is under construction. Please check back later.`,
-        
         "codez": "List of codez repositories here.",
-
         "blog": "You'll find some of my ramblings here."
     }
 
     blogz = [
         {
-            "file": "/blogposts/2022-07-21-10-30.html",
-            "date": new Date(2022, 6, 12, 21, 42).toString(),
-            "title": "First rambling blog content"
+            "file": "/blogposts/ramblings_001.html",
+            "date": "September 9, 2022",
+            "title": "Some thoughts"
+        },
+        {
+            "file": "/blogposts/ramblings_002.html",
+            "date": "September 10, 2022",
+            "title": "Some more thoughts"
         }
     ]
 

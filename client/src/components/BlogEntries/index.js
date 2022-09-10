@@ -6,28 +6,27 @@ import BlogPost from '../BlogPost';
 
 
 const BlogEntries = (props) => {
-
+  const [children, setChildren] = useState([])
   const contentProvider = new ContentProvider();
   const blogz = contentProvider.getBlogList();
+  //let children = [];
+  let blogContent = [];
 
   useEffect(() => {
+    let childComponents = [];
     blogz.map(entry => {
       console.log("Blog with title '" + entry.title + "' has file: " + entry.file);
       Axios(entry.file).then(res => {
         console.log("Blog with title '" + entry.title + "' has contents: " + res.data);
-      })
-      //fileReader.readAsText(entry.file);
-      //fileReader.onload = () => {
-      //  console.log("Blog with title '" + entry.title + " has content: " + fileReader.contents);
-      //}
-    })
-  }, [blogz])
+        childComponents.push( <BlogPost title={entry.title} content={res.data} date={entry.date}/> );
+      });
+    });
+    setChildren(childComponents);
+  }, [])
 
   return(
       <Container>
-          {blogz.map(entry => {
-            <BlogPost title={entry.title} content={entry.content} date={entry.date}/>;
-          })}
+          {children}
       </Container>
   )
 }

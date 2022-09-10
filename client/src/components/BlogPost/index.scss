@@ -3,14 +3,12 @@
 @import "~bootstrap/scss/bootstrap";
 
 .blog-entry {
-  color:antiquewhite;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
+  background-color: rgb(240, 233, 233);
   //font-weight: bolder;
-  border-radius: 4px;
-  height: 32px;
-  color: darkviolet;
+  border-radius: 8px;
 }
 
 .blog-title {
@@ -19,8 +17,9 @@
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   font-weight: bolder;
-  border-radius: 4px;
-  min-height: 24px;
+  min-height: 12px;
+  padding-top: 1em;
+  padding-left: 1em;
 }
 
 .blog-content {
@@ -28,8 +27,8 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
-  //font-weight: bolder;
-  border-radius: 4px;
+  margin-right: 1em;
+  margin-left: 1em;
 }
 
 a {
