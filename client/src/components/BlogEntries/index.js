@@ -13,15 +13,16 @@ const BlogEntries = (props) => {
   let blogContent = [];
 
   useEffect(() => {
-    let childComponents = [];
     blogz.map(entry => {
       console.log("Blog with title '" + entry.title + "' has file: " + entry.file);
+      let index = 0;
       Axios(entry.file).then(res => {
         console.log("Blog with title '" + entry.title + "' has contents: " + res.data);
-        childComponents.push( <BlogPost title={entry.title} content={res.data} date={entry.date}/> );
+        children.push( <BlogPost title={entry.title} content={res.data} date={entry.date}/> );
+        index++;
       });
     });
-    setChildren(childComponents);
+    setChildren(children);
   }, [])
 
   return(
