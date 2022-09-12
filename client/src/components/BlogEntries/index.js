@@ -9,20 +9,29 @@ const BlogEntries = (props) => {
   const [children, setChildren] = useState([])
   const contentProvider = new ContentProvider();
   const blogz = contentProvider.getBlogList();
-  //let children = [];
-  let blogContent = [];
+  
+  
+  
+  function getBlogz() {
+    let subChildren = [];
+    Promise.all(
+      blogz.map(async (entry) => {
+        //console.log("Blog with title '" + entry.title + "' has file: " + entry.file);
+        Axios.get(entry.file).then(res => {
+          console.log("Blog with title '" + entry.title + "' has contents: " + res.data);
+          subChildren.push(<BlogPost title={entry.title} content={res.data} date={entry.date}/>);
+        })
+      })
+    )
+    setChildren(subChildren);
+  } 
 
   useEffect(() => {
-    blogz.map(entry => {
-      console.log("Blog with title '" + entry.title + "' has file: " + entry.file);
-      let index = 0;
-      Axios(entry.file).then(res => {
-        console.log("Blog with title '" + entry.title + "' has contents: " + res.data);
-        children.push( <BlogPost title={entry.title} content={res.data} date={entry.date}/> );
-        index++;
-      });
-    });
-    setChildren(children);
+    getBlogz();
+    //setChildren(getBlogz());
+    return () => {
+      setChildren([]);
+    };
   }, [])
 
   return(
