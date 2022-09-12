@@ -45,6 +45,15 @@ class ContentProvider {
         "blog": "You'll find some of my ramblings here."
     }
 
+    eventz = [
+        {
+            "name": "Movable Do plays Haydn and Marquardt",
+            "date": "6:30 PM, September 9, 2022",
+            "location": "5821 Rio Lama Rd, NE, Rio Rancho New Mexico",
+            "description": "Movable Do will perform a concert featuring Haydn's Piano Trio in C Major and Paul Marquardt's 'Young Frankenstein' Variations"
+        }
+    ]
+
     blogz = [
         {
             "file": "/blogposts/ramblings_001.html",
@@ -54,7 +63,12 @@ class ContentProvider {
         {
             "file": "/blogposts/ramblings_002.html",
             "date": "September 10, 2022",
-            "title": "Some more thoughts"
+            "title": "Some more thoughts on Javascript"
+        },
+        {
+            "file": "/blogposts/ramblings_003.html",
+            "date": "September 11, 2022",
+            "title": "Some thoughts on music"
         }
     ]
 
@@ -224,6 +238,12 @@ class ContentProvider {
     getBlogList = (props) => {
         //if ( props.name in this.data ) {
             return this.blogz;
+        //}
+    }
+
+    getEventList = (props) => {
+        //if ( props.name in this.data ) {
+            return this.eventz;
         //}
     }
 

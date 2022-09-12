@@ -5,19 +5,15 @@ import Col from 'react-bootstrap/Col';
 import '../data/ContentProvider';
 import ContentProvider from "../data/ContentProvider";
 import ContentHeader from "../components/ContentHeader";
+import EventItems from '../components/EventItems';
 import ReactDOM from "react-dom";
 import './index.scss';
 
 class Events extends React.Component {
     componentDidMount(props) {
-        const contentProvider = new ContentProvider();
-        let el = React.createElement( 'div', {},
-            <Row className='mr-auto'>
-                <Col>{contentProvider.getContent({name: "events"})}</Col>
-            </Row>
-        )
+        let newElement = React.createElement(EventItems)
         ReactDOM.render(
-                el,
+                newElement,
                 document.getElementById('content')
         )
     }
