@@ -3,11 +3,22 @@
 .row {
   min-height: 160px;
   padding-top: 0px;
-  padding-bottom: 20px;
+  padding-bottom: 12px;
   margin-left: 0px;
   margin-bottom: 20px;
 }
 
+.top-heading {
+  min-height: 240px;
+  border-radius: 8px;
+}
+
+.content {
+  background-color: rgba(229, 231, 233, 0.918);
+  border-radius: 8px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
 
 .bg-image-01 {
   background-image: url('/images/banner-background-01.png');

@@ -1,16 +1,17 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "RESTful API for PRM Website",
   "main": "index.js",
-  "author": "Laszlo Leber (Codeching)",
+  "author": "Paul Marquardt",
   "license": "ISC",
   "dependencies": {
-    "express": "4.16.3",
-    "pg": "8.0.3",
+    "body-parser": "*",
     "cors": "2.8.4",
-    "nodemon": "1.18.3",
-    "body-parser": "*"
+    "express": "^4.16.3",
+    "mongoose": "^6.6.0",
+    "nodemon": "^1.18.3",
+    "pg": "8.0.3"
   },
   "scripts": {
     "dev": "nodemon",

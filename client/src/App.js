@@ -11,11 +11,11 @@ function getRandomBGImage() {
 
 function App() {
     const [appState, setAppState] = useState([]);
-    const [bgImageClass, setBgImageClass] = useState(getRandomBGImage() + ' main w-100');
+    const [bgImageClass, setBgImageClass] = useState(getRandomBGImage() + ' main w-100 top-heading');
     const [updateInterval, setUpdateInterval] = useState(60000);
     useEffect(() => {
         const updateImage = setInterval(() => {
-            setBgImageClass(getRandomBGImage() + ' main w-100');
+            setBgImageClass(getRandomBGImage() + ' main w-100 top-heading');
             //console.log(bgImageClass);
             setUpdateInterval( Math.floor( Math.random() * 60000 + 60000 ));
         }, updateInterval);
@@ -24,7 +24,7 @@ function App() {
 
     return (
         <Container>
-            <Container fluid className={ bgImageClass }>
+            <Container fluid className={bgImageClass} >
                 <MainNavigation/>
             </Container>
             <Container id="content" className='content'/>

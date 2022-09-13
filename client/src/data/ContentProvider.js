@@ -13,7 +13,7 @@ class ContentProvider {
         "random_melody": "Here is a random melody rendered right in your browser. As my site evolves, you'll be able to select various profiles for melodic shape and stochastic variety to produce more interesting melodies.",
         "music_recordings": "Some recordings of my music compositions.",
         "codez": "Feel free to use/steal (with proper attribution) some of my codez.",
-        "blogz": "Read my Blog for some really amazing things that come out of MA' BIG FUCKING BRAIN.",
+        "blogz": "Read my Blog on various subjects ON WHICH I AM AN AN INCONTROVERTIBLE EXPERT.",
         "signin": "Sign into this site for mo better stuff."
     }
 

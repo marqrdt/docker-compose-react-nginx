@@ -87,7 +87,7 @@ const RandomMelody = (props) => {
     return (
         <Container>
             <MelodyForm defaultValues={defaultValues} onSubmitHandler={submitHandler} onMelodyLengthChangeHandler={melodyLengthChangeHandler} onMelodyTypeChangeHandler={melodyTypeChangeHandler}/>
-            <Row id="renderedMelody" dangerouslySetInnerHTML={{ __html: "<div>" + svgURL + "</div>"}}/>
+            <Row dangerouslySetInnerHTML={{ __html: '<div id="rendered-melody">' + svgURL + '</div>'}}/>
         </Container>
     )
 }
