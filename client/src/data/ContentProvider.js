@@ -50,7 +50,7 @@ class ContentProvider {
             "name": "Movable Do plays Haydn and Marquardt",
             "date": "6:30 PM, September 9, 2022",
             "location": "5821 Rio Lama Rd, NE, Rio Rancho New Mexico",
-            "description": "Movable Do will perform a concert featuring Haydn's Piano Trio in C Major and Paul Marquardt's 'Young Frankenstein' Variations"
+            "description": "Movable Do will perform a concert featuring Haydn's Piano Trio in C Major and Paul Marquardt's 'Young Frankenstein' Variations and music by Handel (arr. Halvorsen)."
         }
     ]
 
