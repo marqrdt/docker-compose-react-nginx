@@ -1,31 +1,25 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import Col from 'react-bootstrap/Col';
 import './index.scss';
 
-class ScoreItem extends React.Component {
+const ScoreItem = (props) => {
 
-    constructor(props) {
-        super(props)
-    }
-
-    componentDidMount(props) {
-
-    }
-
-    render() {
-        console.log(this.props)
-        if (this.props.score.hasOwnProperty("url")) {
-            let scoreLink = this.props.score.url.replace("scores/", "");
+    const [scoreItem, setScoreItem] = useState(null);
+    useEffect(() => {
+        if (props.score.hasOwnProperty("url")) {
+            let scoreLink = props.score.url.replace("scores/", "");
             console.log("score name: " + scoreLink);
-            return (
-                <Col className="score-item"><a href={this.props.score.url} download={scoreLink}><strong>{this.props.score.title}</strong></a> ({this.props.score.year}) :: {this.props.score.description} (duration: {this.props.score.duration})</Col>
-            )
+            setScoreItem(<Col className="score-item"><a href={props.score.url} download={scoreLink}><strong>{props.score.title}</strong></a> ({props.score.year}) :: {props.score.description} (duration: {props.score.duration})</Col>)
         } else {
-            return (
-                <Col className="score-item"><strong>{this.props.score.title}</strong> ({this.props.score.year}) :: {this.props.score.description} (duration: {this.props.score.duration})</Col>
-            )
+            setScoreItem(<Col className="score-item"><strong>{props.score.title}</strong> ({props.score.year}) :: {props.score.description} (duration: {props.score.duration})</Col>)
         }
-    }
+        return () => {
+            setScoreItem(null);
+        };
+    }, [props])
+
+    return(scoreItem)
 }
 
 export default ScoreItem;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -10,9 +11,10 @@ import Card from '../components/Card'
 import ReactDOM, { render } from "react-dom";
 import './index.scss';
 
-class MusicScores extends React.Component {
-        
-    componentDidMount(state) {
+const MusicScores = () => {
+
+    const contentProvider = new ContentProvider();
+    useEffect(() => {
         const contentProvider = new ContentProvider();
         const scoreList = contentProvider.getScoreList()
         let newElement = React.createElement(ScoreList)
@@ -20,16 +22,13 @@ class MusicScores extends React.Component {
                 newElement,
                 document.getElementById('content')
         )
-    }
+        }, [])
 
-    render(props) {
-    const contentProvider = new ContentProvider();
     return(
-            <Container id="heading">
-                <ContentHeader text={contentProvider.getHeading({name: "music_scores"})} className="content-header"/>
-            </Container>
-        )
-    }
+        <Container id="heading">
+            <ContentHeader text={contentProvider.getHeading({name: "music_scores"})} className="content-header"/>
+        </Container>
+    )
 }
 
 export default MusicScores;

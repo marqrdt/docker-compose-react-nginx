@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Axios from "axios"; // Import Axios or use Fetch.
 import ContentProvider from "../../data/ContentProvider";
 import EventItem from '../EventItem';
+import 'animate.css';
 
 
 const EventItems = (props) => {

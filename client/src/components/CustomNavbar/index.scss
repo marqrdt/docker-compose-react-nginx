@@ -13,13 +13,12 @@
   }
 
   .navbar-brand:hover {
-    background-color: black;
     color:darkviolet !important;
+    //background-color:cadetblue;
   }
 
 .nav-link {
   color:darkviolet !important;
-  background-color:beige;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
@@ -29,7 +28,7 @@
 
 .navitem-style {
   color:darkslateblue !important;
-  background-color: rgba(229, 231, 233, 0.918);
+  background-color: lightgray;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
@@ -44,7 +43,7 @@
 
 .nav-link:hover,
 .nav-link:focus {
-  background-color:darkviolet;
+  background-color: lightgray;
   color:slateblue !important;
   border-radius: 4px;
 }

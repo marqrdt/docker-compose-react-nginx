@@ -9,14 +9,6 @@ import './index.scss';
 const CustomNavbar = (props) => {
     const [showBasic, setShowBasic] = useState(true);
 
-    const menuForAuthenticated = () => {
-        console.log("props.isAuthenticated is " + props.applicationState.isAuthenticated)
-        return (props.applicationState.isAuthenticated ?
-            <Navbar expand='lg' className="bg-primary rounded m-4">
-
-            </Navbar> : <Fragment/>)
-    }
-
     return (
         <Navbar activeKey="1" expand="lg">
             <Container>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import { useEffect, useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import '../data/ContentProvider';
@@ -10,10 +11,10 @@ import Card from '../components/Card'
 import ReactDOM, { render } from "react-dom";
 import './index.scss';
 
-class Artwork extends React.Component {
+const Artwork = () => {
         
-    componentDidMount(state) {
-        const contentProvider = new ContentProvider();
+    const contentProvider = new ContentProvider();
+    useEffect(() => {
         const artworkList = contentProvider.getArtworkList()
         let children = []
         children.push(<Row>{contentProvider.getContent({name: "artwork"})}</Row>)
@@ -28,16 +29,13 @@ class Artwork extends React.Component {
                 el,
                 document.getElementById('content')
         )
-    }
+    }, [contentProvider])
 
-    render(props) {
-    const contentProvider = new ContentProvider();
     return(
-        <Container id="heading">
+        <Container id="heading" className=" animate__animated animate__fadeIn">
             <ContentHeader text={contentProvider.getHeading({name: "artwork"})} className="content-header"/>
         </Container>
         )
-    }
 }
 
 export default Artwork;

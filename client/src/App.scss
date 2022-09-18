@@ -18,6 +18,7 @@
   border-radius: 8px;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  min-height: 180px;
 }
 
 .bg-image-01 {
@@ -63,6 +64,10 @@
 .bg-image-09 {
   background-image: url('/images/banner-background-09.png');
   background-repeat: repeat-x;
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 2s;
 }
 
 .footer {

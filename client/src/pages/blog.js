@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import { useEffect, useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import '../data/ContentProvider';
@@ -9,26 +10,23 @@ import ContentHeader from "../components/ContentHeader";
 import ReactDOM from "react-dom";
 import './index.scss';
 
-class Blog extends React.Component{
+const Blog = () => {
     //let this_props = {name: "Stuff"}
 
-    componentDidMount(props) {
+    const contentProvider = new ContentProvider();
+    useEffect(() => {
         let newElement = React.createElement(BlogEntries)
         ReactDOM.render(
                 newElement,
                 document.getElementById('content')
         )
-    }
+    }, [])
 
-    render(props) {
-        const contentProvider = new ContentProvider();
-        return(
-            <Container id="heading">
-                <ContentHeader text={contentProvider.getHeading({name: "blogz"})} className="content-header"/>
-            </Container>
-        )
-    }
-
+    return(
+        <Container id="heading">
+            <ContentHeader text={contentProvider.getHeading({name: "blogz"})} className="content-header"/>
+        </Container>
+    )
 }
 
 export default Blog;

@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Axios from "axios"; // Import Axios or use Fetch.
 import ContentProvider from "../../data/ContentProvider";
 import BlogPost from '../BlogPost';
-
+import 'animate.css';
 
 const BlogEntries = (props) => {
   const [children, setChildren] = useState([])
@@ -38,7 +38,7 @@ const BlogEntries = (props) => {
   }, [])
 
   return(
-      <Container>
+      <Container className="animate__animated animate__fadeIn">
           {children}
       </Container>
   )

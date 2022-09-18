@@ -4,6 +4,7 @@ import {
     Row,
     Col
 } from 'react-bootstrap';
+import 'animate.css';
 
 import './index.scss';
 

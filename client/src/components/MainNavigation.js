@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import CustomNavbar from "./CustomNavbar";
 import Home from "../pages";
 import About from "../pages/about";
@@ -23,21 +23,20 @@ const MainNavigation = (props) => {
             <Router>
                 {/*<CustomMDBNavbar applicationState={appConfig}/>*/}
                 <CustomNavbar applicationState={appConfig}/>
-                {/* <div class="jumbotron" className="m-4 bg-secondary p-lg-5">A VERY BIG JUMBOTRON</div> */}
-                <Switch>
-                    <Route path='/' exact render={(props) => <Home name={"home"} title={'Home page'}/>}/>
-                    <Route path='/about' render={(props) => <About name={"about"} title={'About page'}/>}/>
-                    <Route path='/events' render={(props) => <Events name={"events"} title={'Events page'}/>}/>
-                    <Route path='/artwork' render={(props) => <Artwork name={"artwork"} title={'Artwork page'}/>}/>
-                    <Route path='/fractals' render={(props) => <Fractals name={"fractals"} title={'Fractals page'}/>}/>
-                    <Route path='/music' render={(props) => <Music name={"music"} title={'Music page'}/>}/>
-                    <Route path='/music_scores' render={(props) => <MusicScores name={"music_scores"} title={'Music scores'}/>}/>
-                    <Route path='/music_recordings' render={(props) => <MusicRecordings name={"music_recordings"} title={'Music recordings'}/>}/>
-                    <Route path='/random_melody' render={(props) => <RandomMusic name={"random_melody"} title={'random_melody'}/>}/>
-                    <Route path='/codez' render={(props) => <Codez name={"codez"} title={'Codez page'}/>}/>
-                    <Route path='/blog' render={(props) => <Blog name={"blog"} title={'Blog page'}/>}/>
-                    <Route path='/signin' render={(props) => <Signin name={"signin"} title={'Sign In'}/>}/>
-                </Switch>
+                <Routes>
+                    <Route path='/' exact element={<Home/>} title={'Home page'}/>
+                    <Route path='/about' element={<About/>} show={true} name={"about"} title={'About page'}/>
+                    <Route path='/events' element={<Events/>} name={"events"} title={'Events page'}/>
+                    <Route path='/artwork' element={<Artwork/>} name={"artwork"} title={'Artwork page'}/>
+                    <Route path='/fractals' element={<Fractals/>} name={"fractals"} title={'Fractals page'}/>
+                    <Route path='/music' element={<Music/>} name={"music"} title={'Music page'}/>
+                    <Route path='/music_scores' element={<MusicScores/>} name={"music_scores"} title={'Music scores'}/>
+                    <Route path='/music_recordings' element={<MusicRecordings/>} name={"music_recordings"} title={'Music recordings'}/>
+                    <Route path='/random_melody' element={<RandomMusic/>} name={"random_melody"} title={'random_melody'}/>
+                    <Route path='/codez' element={<Codez/>} name={"codez"} title={'Codez page'}/>
+                    <Route path='/blog' element={<Blog/>} name={"blog"} title={'Blog page'}/>
+                    <Route path='/signin' element={<Signin/>} name={"signin"} title={'Sign In'}/>
+                </Routes>
             </Router>
         )
 }

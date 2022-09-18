@@ -36,7 +36,7 @@ class ScoreList extends React.Component {
         const contentProvider = new ContentProvider();
         let scores = contentProvider.getScoreList();
         return(
-            <Container>
+            <Container className="animate__animated animate__fadeIn">
                 {scores.map((score,i) => {
                     return <ScoreItem className="score-item" key={i} score={score}/>;
                 })}

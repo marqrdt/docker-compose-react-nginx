@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -9,28 +10,21 @@ import EventItems from '../components/EventItems';
 import ReactDOM from "react-dom";
 import './index.scss';
 
-class Events extends React.Component {
-    componentDidMount(props) {
+const Events = () => {
+    const contentProvider = new ContentProvider();
+    useEffect((props) => {
         let newElement = React.createElement(EventItems)
         ReactDOM.render(
-                newElement,
-                document.getElementById('content')
+            newElement,
+            document.getElementById('content')
         )
-    }
+    }, [])
 
-    render(props) {
-        const contentProvider = new ContentProvider();
-        let el = React.createElement( 'div', {},
-            <Row className='mr-auto'>
-                <Col>{contentProvider.getContent({name: "events"})}</Col>
-            </Row>
-        )
-        return (
-            <Container id="heading">
-                <ContentHeader text={contentProvider.getHeading({name: "events"})} className="content-header"/>
-            </Container>
+    return (
+        <Container id="heading">
+            <ContentHeader text={contentProvider.getHeading({ name: "events" })} className="content-header" />
+        </Container>
     )
-}
 }
 
 export default Events;
