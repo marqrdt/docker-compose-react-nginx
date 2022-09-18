@@ -20,12 +20,10 @@ class RepoList extends React.Component {
     render(props) {
         const contentProvider = new ContentProvider();
         let repos = contentProvider.getRepoList();
-        let index = 0;
         return(
             <Container className="repo-block">
-                {repos.map(repo => {
-                    index +=1;
-                    return <RepoItem key={index} repo={repo}/>;
+                {repos.map((repo,i) => {
+                    return <RepoItem key={i} repo={repo}/>;
                 })}
             </Container>
         )

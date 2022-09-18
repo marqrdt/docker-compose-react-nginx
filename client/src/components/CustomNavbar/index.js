@@ -25,7 +25,7 @@ const CustomNavbar = (props) => {
                 <Nav variant="pills" className="me-auto">
                     <Navbar.Brand className="navitem-style text-center" as={Link} to="/">newscores</Navbar.Brand>
                     <Nav.Item className="navitem-style text-center">
-                        <Nav.Link as={Link} to="/about">about</Nav.Link>
+                        <Nav.Link as={Link} to="/about" aria-controls="about-page">about</Nav.Link>
                     </Nav.Item>
                     <Nav.Item className="navitem-style text-center">
                         <Nav.Link as={Link} to="/events">events</Nav.Link>

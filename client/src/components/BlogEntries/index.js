@@ -14,13 +14,13 @@ const BlogEntries = (props) => {
   function getBlogz() {
     let subChildren = [];
     Promise.all(
-      blogz.map(async (entry) => {
+      blogz.map(async (entry,i) => {
         console.log("Blog with title '" + entry.title + "' has file: " + entry.file);
         await Axios.get(entry.file).then(res => {
           console.log("Blog with title '" + entry.title + "' has contents: " + res.data);
           return res;
         }).then(blogEntry => {
-          subChildren.push(<BlogPost title={entry.title} content={blogEntry.data} date={entry.date}/>);
+          subChildren.push(<BlogPost key={i} title={entry.title} content={blogEntry.data} date={entry.date}/>);
         });  
       })
     ).then(res => {

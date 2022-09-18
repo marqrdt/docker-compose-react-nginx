@@ -35,12 +35,10 @@ class ScoreList extends React.Component {
     render(props) {
         const contentProvider = new ContentProvider();
         let scores = contentProvider.getScoreList();
-        let index = 0;
         return(
             <Container>
-                {scores.map(score => {
-                    index +=1;
-                    return <ScoreItem className="score-item" key={index} score={score}/>;
+                {scores.map((score,i) => {
+                    return <ScoreItem className="score-item" key={i} score={score}/>;
                 })}
             </Container>
         )

@@ -1,3 +1,4 @@
+import React from 'react';
 import 'bootswatch/dist/flatly/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import { MDBFooter } from 'mdb-react-ui-kit';
@@ -27,7 +28,9 @@ function App() {
             <Container fluid className={bgImageClass} >
                 <MainNavigation/>
             </Container>
-            <Container id="content" className='content'/>
+            <Container>
+                    <div id="content" className="content"/>
+            </Container>
             <MDBFooter className="text-center text-dark bg-light footer"><strong>Paul Marquardt</strong> &#169;2022</MDBFooter>
         </Container>
     );
