@@ -16,11 +16,9 @@ const Home = (props) => {
     useEffect(() => {
         let newElement = React.createElement('div', { name: "Blog stuff" },
             <Container>
-                <div fluid className="content jumbotron animate__animated animate__fadeIn">
-                    <h1>newscores.com</h1>
-                    <div>
-                        The web portal of Paul Marquardt.
-                    </div>
+                <h1>newscores.com</h1>
+                <div>
+                    The web portal of Paul Marquardt.
                 </div>
             </Container>
         )

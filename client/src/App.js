@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootswatch/dist/flatly/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
+import Paper from "@material-ui/core/Paper";
 import { MDBFooter } from 'mdb-react-ui-kit';
 import {useState, useEffect} from 'react';
 import MainNavigation from './components/MainNavigation';
@@ -14,7 +15,7 @@ function getRandomBGImage() {
 function App() {
     const imageDuration = 30000;
     const [appState, setAppState] = useState([]);
-    const [bgImageClass, setBgImageClass] = useState(getRandomBGImage() + ' main w-100 top-heading animate__animated animate__fadeIn');
+    const [bgImageClass, setBgImageClass] = useState(getRandomBGImage() + ' animate__animated animate__fadeIn');
     const [updateInterval, setUpdateInterval] = useState(imageDuration);
     useEffect(() => {
         const updateImage = setInterval(() => {
@@ -26,14 +27,18 @@ function App() {
     }, []);
 
     return (
-        <Container>
-            <Container fluid className={bgImageClass} >
+        <Container fluid>
+            <Paper elevation={3} className={bgImageClass}>
+                <Container className="content">
                 <MainNavigation/>
-            </Container>
-            <Container>
+                </Container>
+            </Paper>
+            <Paper elevation={3}>
                     <div id="content" className="content"/>
-            </Container>
-            <MDBFooter className="text-center text-dark bg-light footer"><strong>Paul Marquardt</strong> &#169;2022</MDBFooter>
+            </Paper>
+            <Paper>
+                <MDBFooter className="text-center text-dark bg-light footer"><strong>Paul Marquardt</strong> &#169;2022</MDBFooter>
+            </Paper>
         </Container>
     );
 }
