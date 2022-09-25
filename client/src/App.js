@@ -29,9 +29,7 @@ function App() {
     return (
         <Container fluid>
             <Paper elevation={3} className={bgImageClass}>
-                <Container className="content">
                 <MainNavigation/>
-                </Container>
             </Paper>
             <Paper elevation={3}>
                     <div id="content" className="content"/>
