@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import '../data/ContentProvider';
+import Paper from "@material-ui/core/Paper";
 import {FcAbout} from "react-icons/all";
 import ContentProvider from "../data/ContentProvider";
 import ContentHeader from "../components/ContentHeader";
@@ -17,10 +18,10 @@ const Artwork = () => {
     useEffect(() => {
         const artworkList = contentProvider.getArtworkList()
         let children = []
-        children.push(<Row>{contentProvider.getContent({name: "artwork"})}</Row>)
+        children.push(<Container>{contentProvider.getContent({name: "artwork"})}</Container>)
         Object.keys(artworkList).forEach( (k, i) => {
             let imgSource = '..' + artworkList[k].path
-            children.push(<Card key={k}><img src={imgSource} alt={{k}} height={"960"}/></Card>)
+            children.push(<div className=" animate__animated animate__fadeIn" key={k}><img src={imgSource} alt={{k}} height={"960"}/></div>)
         })
         let el = React.createElement( 'div', {},
             <div className='mr-auto'>{children}</div>
@@ -32,7 +33,7 @@ const Artwork = () => {
     }, [contentProvider])
 
     return(
-        <Container id="heading" className=" animate__animated animate__fadeIn">
+        <Container id="heading">
             <ContentHeader text={contentProvider.getHeading({name: "artwork"})} className="content-header"/>
         </Container>
         )

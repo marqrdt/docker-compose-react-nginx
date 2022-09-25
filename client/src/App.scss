@@ -4,6 +4,7 @@
   min-height: 160px;
   padding-top: 0px;
   padding-bottom: 0px;
+  padding-left: 0px;
   margin-left: 0px;
   margin-bottom: 20px;
 }
@@ -17,47 +18,61 @@
   border-radius: 8px;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  padding-right: 0.5em;
+  margin-left: 0px;
+  margin-right: 0px;
   min-height: 240px;
+  background-image: url('/images/triangle-mosaic_01.png');
+  background-repeat: repeat;
 }
 
 .bg-image-01 {
   background-image: url('/images/banner-background-01.png');
   background-repeat: repeat-x;
+  min-height: 240px;
+  background-repeat: repeat;
 }
 
 .bg-image-02 {
   background-image: url('/images/banner-background-02.png');
   background-repeat: repeat-x;
+  min-height: 240px;
 }
 
 .bg-image-03 {
   background-image: url('/images/banner-background-03.png');
   background-repeat: repeat-x;
+  min-height: 240px;
 }
 
 .bg-image-04 {
   background-image: url('/images/banner-background-04.png');
   background-repeat: repeat-x;
+  min-height: 240px;
 }
 
 .bg-image-05 {
   background-image: url('/images/banner-background-05.png');
   background-repeat: repeat-x;
+  min-height: 240px;
 }
 
 .bg-image-06 {
   background-image: url('/images/banner-background-06.png');
   background-repeat: repeat-x;
+  min-height: 240px;
 }
 
 .bg-image-07 {
   background-image: url('/images/banner-background-07.png');
   background-repeat: repeat-x;
+  min-height: 240px;
 }
 
 .bg-image-08 {
   background-image: url('/images/banner-background-08.png');
   background-repeat: repeat-x;
+  min-height: 240px;
 }
 
 .bg-image-09 {
