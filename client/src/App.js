@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootswatch/dist/flatly/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
-import Paper from "@material-ui/core/Paper";
+import { Paper } from '@mui/material';
 import { MDBFooter } from 'mdb-react-ui-kit';
 import {useState, useEffect} from 'react';
 import MainNavigation from './components/MainNavigation';

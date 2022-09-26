@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import '../data/ContentProvider';
-import Paper from "@material-ui/core/Paper";
 import {FcAbout} from "react-icons/all";
 import ContentProvider from "../data/ContentProvider";
 import ContentHeader from "../components/ContentHeader";
