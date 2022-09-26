@@ -55,6 +55,8 @@ services:
       - PGPASSWORD=postgres_password
       - PGPORT=5432
     container_name: api_prmewb
+    ports:
+      - "4001:4001"
   client:
     user: 1000:1000
     container_name: client_prmweb
