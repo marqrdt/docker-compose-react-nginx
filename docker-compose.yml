@@ -5,9 +5,9 @@ services:
 #    environment:
 #      - POSTGRES_PASSWORD=postgres_password
   mongo:
-    image: mongo-latest
+    image: mongo:latest
     restart: always
-    container_name: mongodb
+    container_name: mongodb_prmweb
     ports:
       - 27017:27017
     environment:
@@ -18,17 +18,18 @@ services:
   mongo-express:
     image: mongo-express
     restart: always
+    container_name: mongo_express_prmweb
     ports:
       - 8081:8081
     environment:
-      ME_CONFIG_MONGODB_SERVER: mongodb
+      ME_CONFIG_MONGODB_SERVER: mongodb_prmweb
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: m0ngoP455
       ME_CONFIG_MONGODB_ENABLE_ADMIN: "true"
       ME_CONFIG_BASICAUTH_USERNAME: admin
       ME_CONFIG_BASICAUTH_PASSWORD: admin123
     depends_on:
-    - mongodb
+    - mongodb_prmweb
   nginx:
     depends_on:
       - api
@@ -63,3 +64,5 @@ services:
     volumes:
       - /app/node_modules
       - ./client:/app
+volumes:
+  mongodb-data:
