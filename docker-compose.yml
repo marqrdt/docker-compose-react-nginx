@@ -29,7 +29,7 @@ services:
       ME_CONFIG_BASICAUTH_USERNAME: admin
       ME_CONFIG_BASICAUTH_PASSWORD: admin123
     depends_on:
-    - mongodb_prmweb
+    - mongo
   nginx:
     depends_on:
       - api
@@ -54,7 +54,7 @@ services:
       - PGDATABASE=postgres
       - PGPASSWORD=postgres_password
       - PGPORT=5432
-    container_name: api_prmewb
+    container_name: api_prmweb
     ports:
       - "4001:4001"
   client:

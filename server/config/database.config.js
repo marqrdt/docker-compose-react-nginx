@@ -1,3 +1,3 @@
 module.exports = {
-    url: 'mongodb://mongodb_prmweb:27017/prm-posts'
+    url: 'mongodb://prmweb:prmwebP455@mongodb_prmweb:27017/prmweb?authSource=admin'
 }
