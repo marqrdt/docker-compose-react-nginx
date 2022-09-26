@@ -2,19 +2,20 @@
   "name": "server",
   "version": "1.0.0",
   "description": "RESTful API for PRM Website",
-  "main": "index.js",
+  "main": "server.js",
   "author": "Paul Marquardt",
   "license": "ISC",
   "dependencies": {
     "body-parser": "*",
     "cors": "2.8.4",
     "express": "^4.16.3",
+    "mongodb": "^4.10.0",
     "mongoose": "^6.6.0",
     "nodemon": "^1.18.3",
     "pg": "8.0.3"
   },
   "scripts": {
     "dev": "nodemon",
-    "start": "node index.js"
+    "start": "node server.js"
   }
 }
