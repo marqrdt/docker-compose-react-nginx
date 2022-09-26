@@ -35,6 +35,7 @@ services:
       - api
       - client
     restart: always
+    container_name: nginx_prmewb
     build:
       dockerfile: Dockerfile.dev
       context: ./nginx
@@ -53,8 +54,10 @@ services:
       - PGDATABASE=postgres
       - PGPASSWORD=postgres_password
       - PGPORT=5432
+    container_name: api_prmewb
   client:
     user: 1000:1000
+    container_name: client_prmweb
     stdin_open: true
     environment:
       - CHOKIDAR_USEPOLLING=true

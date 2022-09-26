@@ -30,7 +30,7 @@ const Fractals = () => {
             el,
             document.getElementById('content')
         )
-    }, [])
+    }, [contentProvider])
 
     return (
         <Container id="heading">

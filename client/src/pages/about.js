@@ -26,7 +26,7 @@ const About = (props) => {
             el,
             document.getElementById('content')
         )
-    }, [])
+    }, [contentProvider])
 
     return(
         <Container id="heading">
