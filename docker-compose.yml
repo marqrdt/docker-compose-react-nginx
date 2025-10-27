@@ -32,7 +32,6 @@ services:
     - mongo
   nginx:
     depends_on:
-      - api
       - client
     restart: always
     container_name: nginx_prmewb
@@ -42,6 +41,7 @@ services:
     ports:
       - "3050:80"
   api:
+    user: node
     build:
       dockerfile: Dockerfile.dev
       context: "./server"
@@ -58,7 +58,7 @@ services:
     ports:
       - "4001:4001"
   client:
-    user: 1000:1000
+    user: node
     container_name: client_prmweb
     stdin_open: true
     environment:
@@ -67,7 +67,7 @@ services:
       dockerfile: Dockerfile.dev
       context: ./client
     volumes:
-      - /app/node_modules
-      - ./client:/app
+      - .:/app
+      - /app/node_modules  # Anonymous volume for node_modules
 volumes:
   mongodb-data:

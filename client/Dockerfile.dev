@@ -1,26 +1,35 @@
-#FROM node:16-alpine as builder
-FROM node:18
-WORKDIR /app
+FROM node:24-bullseye
+
+#RUN mkdir -p /app
 RUN mkdir -p /app/node_modules/.cache
+RUN chown -R node:node /app
+
+WORKDIR /app
+
+# Copy package files first for better caching
 COPY --chown=node:node ./package.json ./
-COPY --chown=node:node ./package-lock.json ./
-#COPY --chown=node:node ./src ./
-#COPY --chown=node:node ./public ./
-#COPY --chown=node:node ./nginx ./
+
+#RUN mkdir -p /app/node_modules/.cache
+
+# Configure npm for potential network issues
+RUN npm config set registry https://registry.npmjs.org/ && \
+    npm config set strict-ssl false
+
+# Copy remaining files
 COPY --chown=node:node . .
-RUN rm -rf /app/node_modules/*
-RUN chmod 777 /app/node_modules
-RUN chmod 777 /app/node_modules/.cache
+
+# Change ownership of the app directory
+#RUN chown -R node:node /app
+
+# Install dependencies from package.json
 RUN npm install
-RUN npm install react-router-dom@6.4.1
-RUN npm install @emotion/react
-RUN npm install @emotion/styled
-RUN npm install @mui/material
-RUN npm config set unsafe-perm true
-#RUN chown -R node /app/
+
+
+# Set environment variable
+ENV NODE_OPTIONS=--openssl-legacy-provider
+
+# Switch to non-root user
 USER node
-#RUN yarn global add serve
-#RUN npm run build
-#CMD ["npm", "start"]
-CMD ["sh", "-c", "npm start"]
-#CMD [ "serve", "-s", "build" ]
+
+# Start the application
+CMD ["sh", "-c", "NODE_OPTIONS=--openssl-legacy-provider npm start"]
